@@ -122,39 +122,39 @@ Complete the following tasks and assign the results to the specified variables. 
 
 */
 
-//Starter Code
-let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
+  //Starter Code
+  let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
-// 1. Searching
-let hasJavaScript = inputString.includes("JavaScript");
-let codingPosition = inputString.indexOf("Coding");
-let startsWithWelcome = inputString.startsWith("Welcome");
-let endsWithToday = inputString.endsWith("Today");
+  // 1. Searching
+  let hasJavaScript = inputString.includes("JavaScript");
+  let codingPosition = inputString.indexOf("Coding");
+  let startsWithWelcome = inputString.trim().startsWith("Welcome");//added .trim() because was returning false
+  let endsWithToday = inputString.trim().endsWith("today.");//added proper punctuation and case and added .trim() because was returning false.
 
-// 2. Transforming
-let lowercaseString = inputString.toLowerCase();
-let uppercaseString = inputString.toUpperCase();
-let trimmedString = inputString.trim();
-let replacedString = inputString.replace("JavaScript", "coding");
+  // 2. Transforming
+  let lowercaseString = inputString.toLowerCase();
+  let uppercaseString = inputString.toUpperCase();
+  let trimmedString = inputString.trim();
+  let replacedString = inputString.replace("JavaScript", "coding");
 
-// 3. Breaking Apart
-let wordsArray = inputString.split(" ");
+  // 3. Breaking Apart
+  let wordsArray = inputString.split(" ");
 
-// 4. Retrieving
-let firstCharacter = trimmedString.charAt(0);
-let extractedBootcamp = inputString.slice(19, 28);
+  // 4. Retrieving
+  let firstCharacter = trimmedString.charAt(0);
+  let extractedBootcamp = inputString.slice(23, 32);//fixed numbers to print proper word
 
-// Log all results
-console.log({
-  hasJavaScript,
-  codingPosition,
-  startsWithWelcome,
-  endsWithToday,
-  lowercaseString,
-  uppercaseString,
-  trimmedString,
-  replacedString,
-  wordsArray,
-  firstCharacter,
-  extractedBootcamp,
-});
+  // Log all results
+  console.log({
+    hasJavaScript,
+    codingPosition,
+    startsWithWelcome,
+    endsWithToday,
+    lowercaseString,
+    uppercaseString,
+    trimmedString,
+    replacedString,
+    wordsArray,
+    firstCharacter,
+    extractedBootcamp,
+  });
